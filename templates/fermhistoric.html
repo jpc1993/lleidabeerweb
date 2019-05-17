@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Fermentation tank</title>
+  </head>
+  <body>
+    <h2>Fermentation tank historic data</h2>
+    <table border="3">
+
+      <tr align="center">
+	
+	<th>Date</th>
+	<th>Time</th>
+	<th>Temperature Fermentation</th>
+	<th>Mixer</th>
+	<th>Heater</th>
+	<th>Fermentation Valve</th>
+      </tr>
+	{% for row in llista %}
+          <tr align="center">
+	  {% for cell in row %}
+	    <td> {{cell}} </td>
+	  {% endfor %}  
+	  </tr>  
+	{% endfor %}    
+    </table> 
+  </body>
+</html>
+
+
+

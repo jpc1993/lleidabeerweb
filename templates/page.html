@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Current Resume</title>
+  </head>
+  <body>
+
+<h2>Beer-Factory current resume</h2>
+ <h4>Date: {{llista[0][0]}}    Time: {{llista[0][1]}} </h4>
+ 
+    <table border="3">
+      <tr align="center">
+	<th>Date</th>
+	<th>Time</th>
+	<th>Temperature Fermentation of beer</th>
+	<th>Temperature Fermentation of tank</th>
+	<th>Fermentation capacity</th>
+        <th>Beer capacity</th>
+	<th>Mixer</th>
+	<th>Heater</th>
+	<th>Fermentation Valve</th>
+	<th>Beer Valve</th>
+     </tr>
+     
+	{% for row in llista %}
+          <tr align="center">
+	  {% for cell in row %}
+	    <td> {{cell}} </td>
+	  {% endfor %}  
+	  </tr>  
+	{% endfor %}  
+      </tr>
+    </table> 
+	
+  </body>
+</html>
+
+
+
