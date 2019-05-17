@@ -31,7 +31,7 @@ def Taula_ferm():
 	conn = sqlite3.connect('lleidabeer.db')
 	print("Opened database successfully")	
 	llista =[]
-	cursor = conn.execute("SELECT tdate,ttime,tempferm,mixer,heater,valferm from sensors")
+	cursor = conn.execute("SELECT tdate,ttime,tempferm,capferm,mixer,heater,valferm from sensors")
 	for row in cursor:
 	   llista.append(row)
 	#print (llista)   
