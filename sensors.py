@@ -5,7 +5,7 @@ from datetime import date, datetime
 import random
 
 def sensortemp(temperaturabirra,temperaturaferm,heater):
-<<<<<<< HEAD
+
 	valorAleatoripos = random.randint(0,5)*0.85
 	valorAleatori = random.randint(-4,2)*0.93
 	if heater=='OFF'and (temperaturaferm >=20):
@@ -17,7 +17,7 @@ def sensortemp(temperaturabirra,temperaturaferm,heater):
 	if temperaturabirra < 20:
 		temperaturabirra = temperaturabirra + valorAleatoripos*0.2
 
-=======
+
 	valorAleatoriferm = random.randint(0,5)*0.85
 	valorAleatoribirra = random.randint(-2,2)*0.93
 	if heater=='OFF'and (temperaturaferm >=20):
@@ -26,13 +26,13 @@ def sensortemp(temperaturabirra,temperaturaferm,heater):
 		temperaturaferm = temperaturaferm + valorAleatoriferm
 	
 	temperaturabirra = temperaturabirra + valorAleatoribirra
->>>>>>> 1d7b6cfad82e6db9f81424e9f320de0d6553f7e5
+
 	
 	return  temperaturabirra,temperaturaferm
 
 def sensorflow(capaciferm,capacibeer,valvuferm,valvubeer):
 	
-<<<<<<< HEAD
+
 	if (valvuferm=='ON') and (capaciferm >=0.2):
 		capaciferm=capaciferm-0.2
 		capacibeer=capacibeer+0.2
@@ -43,14 +43,14 @@ def sensorflow(capaciferm,capacibeer,valvuferm,valvubeer):
 		capacibeer=capacibeer-0.5
 	if valvubeer=='ON' and (capacibeer <0.5):
 		capacibeer=0
-=======
+
 	if (valvuferm=='ON') and (capaciferm >=0):
 		capaciferm=capaciferm-0.2
 		capacibeer=capacibeer+0.2
 	
 	if valvubeer=='ON' and (capacibeer >=0):
 		capacibeer=capacibeer-0.5
->>>>>>> 1d7b6cfad82e6db9f81424e9f320de0d6553f7e5
+
 	
 	return  capaciferm, capacibeer
 
@@ -89,11 +89,11 @@ def simulador():
 
 while True:		
 	a= simulador()
-<<<<<<< HEAD
+
 	time.sleep(0.3)
-=======
-	time.sleep(5)
->>>>>>> 1d7b6cfad82e6db9f81424e9f320de0d6553f7e5
+
+	
+
 	print ('Running...')
 
 
