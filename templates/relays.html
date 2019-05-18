@@ -9,20 +9,14 @@
  <h4>Date: {{llista[-1][0]}}  Time: {{llista[-1][1]}}</h4>
     <table border="3">
       <tr align="center">
-        <th>Date</th>
-	<th>Time</th>
-	<th>Mixer</th>
+    	<th>Mixer</th>
 	<th>Heater</th>
 	<th>Fermentation Valve</th>
 	<th>Beer Valve</th>
       </tr>
-	{% for row in llista %}
-          <tr align="center">
-	  {% for cell in row %}
-	    <td> {{cell}} </td>
-	  {% endfor %}  
-	  </tr>  
-	{% endfor %} 
+	  {% for x in range(2, 6)%}
+	    <td> {{llista[0][x]}} </td>
+	  {% endfor %}   
       </tr>
     </table> 
   	<form action="/relays" method="post">

@@ -5,12 +5,11 @@
   <body>
 
 <h2>Beer-Factory current resume</h2>
- <h4>Date: {{llista[0][0]}}    Time: {{llista[0][1]}} </h4>
+ <h4>Date: {{llista[-1][0]}}    Time: {{llista[-1][1]}} </h4>
  
     <table border="3">
       <tr align="center">
-	<th>Date</th>
-	<th>Time</th>
+	
 	<th>Temperature Fermentation of beer</th>
 	<th>Temperature Fermentation of tank</th>
 	<th>Fermentation capacity</th>
@@ -20,14 +19,9 @@
 	<th>Fermentation Valve</th>
 	<th>Beer Valve</th>
      </tr>
-     
-	{% for row in llista %}
-          <tr align="center">
-	  {% for cell in row %}
-	    <td> {{cell}} </td>
+     	  {% for x in range(2, 10)%}
+	    <td> {{llista[0][x]}} </td>
 	  {% endfor %}  
-	  </tr>  
-	{% endfor %}  
       </tr>
     </table> 
 	
