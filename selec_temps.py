@@ -105,33 +105,29 @@ def Relays():
 
 
 		hsname = request.form.get("Heater")
-		if hsname== 'HEATER':
-			if  heat== 'OFF':
-				heat= 'ON'
-			else:
-				heat='OFF'
+		if hsname== 'OFFH':
+			heat= 'OFF'
+		if hsname== 'ONH':
+				heat='ON'
 
 				
 		hsname = request.form.get("Mixer")
-		if hsname== 'MIXER':
-			if  mix== 'OFF':
-				mix= 'ON'
-			else:
-				mix='OFF'
+		if hsname== 'OFFM':
+				mix= 'OFF'
+		if hsname== 'ONM':
+				mix='ON'
 
 		hsname = request.form.get("Beerval")
-		if hsname== 'BEER VALVE':
-		   	if  valvubeer== 'OFF':
-				valvubeer= 'ON'
-			else:
-				valvubeer='OFF'
+		if hsname== 'OFFB':
+				valvubeer= 'OFF'
+		if hsname== 'ONB':
+				valvubeer='ON'
 		
 		hsname = request.form.get("Fermval")
-		if hsname== 'FERMENTATION VALVE':
-		   	if  valvuferm== 'OFF':
-				valvuferm= 'ON'
-			else:
-				valvuferm='OFF'			
+		if hsname== 'OFFF':
+		   	valvuferm= 'OFF'
+		if hsname== 'ONF':
+			valvuferm='ON'			
 		
 		cursor = conn.execute("insert into sensors (tdate,ttime,tempbeer,tempferm,capferm,capbeer,mixer,heater,valferm,valbeer) values (?,?,?,?,?,?,?,?,?,?)",(data,time,temperaturabirra,temperaturaferm,capaciferm,capacibeer,mix,heat,valvuferm,valvubeer))
 		
