@@ -101,6 +101,9 @@ def Relays():
                 valvubeer = llista[0][9]
                 
 
+		var='OFF'
+
+
 		hsname = request.form.get("Heater")
 		if hsname== 'OFFH':
 			heat= 'OFF'

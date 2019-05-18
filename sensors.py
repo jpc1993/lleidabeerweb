@@ -12,8 +12,7 @@ def sensortemp(temperaturabirra,temperaturaferm,heater):
 		temperaturaferm = temperaturaferm + valorAleatori
 	elif heater=='ON' or (temperaturaferm <20) :
 		temperaturaferm = temperaturaferm + valorAleatoripos
-	if temperaturabirra > 20:
-		temperaturabirra = temperaturabirra + valorAleatori*0.2
+	
 	if temperaturabirra < 20:
 		temperaturabirra = temperaturabirra + valorAleatoripos*0.2
 
@@ -74,7 +73,7 @@ def simulador():
 while True:		
 	a= simulador()
 
-	time.sleep(0.3)
+	time.sleep(3)
 
 	
 
