@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Beer tank</title>
+  </head>
+  <body>
+<center>
+    <h2>Beer tank historic data</h2>
+ 	<h4>Date: {{llista[-1][0]}}    Time: {{llista[-1][1]}} </h4>
+ 
+    <table border="3">
+
+      <tr align="center">
+	<th>Date</th>
+	<th>Time</th>
+	<th>Temperature Beer</th>
+	<th>Capacity of beer tank</th>
+	<th>Beer Valve</th>
+      </tr>
+	{% for row in llista %}
+          <tr align="center">
+	  {% for cell in row %}
+	    <td> {{cell}} </td>
+	  {% endfor %}  
+	  </tr>  
+	{% endfor %}    
+    </table>
+    </center> 
+  </body>
+</html>
+
+
+

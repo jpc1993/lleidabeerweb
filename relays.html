@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>Relays Manager</title>
+  </head>
+  <body>
+
+<center>
+    <h2>Relays manager</h2>
+ <h4>Date: {{llista[-1][0]}}  Time: {{llista[-1][1]}}</h4>
+    </table>    
+  	<form action="/relays" method="post"> 
+
+    <table border="3">
+      <tr align="center">
+    	<th>Mixer</th>
+    	<th> {{llista[0][2]}} </th>
+    	<th><button type="submit" name="Mixer" value="ONM">ON</button></th>
+    	<th><button type="submit" name="Mixer" value="OFFM">OFF</button></th>
+
+     </tr>
+     <tr align="center">
+    	<th>Heater</th>
+    	<th> {{llista[0][3]}} </th>
+    	<th><button type="submit" name="Heater" value="ONH">ON</button></th>
+    	<th><button type="submit" name="Heater" value="OFFH">OFF</button><br></th>
+    	
+     </tr>
+      <tr align="center">
+    	<th>Fermentation Valve</th>
+    	<th> {{llista[0][4]}} </th>
+    	<th><button type="submit" name="Fermval" value="ONF">ON</button></th>
+    	<th><button type="submit" name="Fermval" value="OFFF">OFF</button><br></th>
+    	
+     </tr>
+      <tr align="center">
+    	<th>Beer Valve</th>
+    	<th> {{llista[0][5]}} </th>
+    	<th><button type="submit" name="Beerval" value="ONB">ON</button></th>
+    	<th><button type="submit" name="Beerval" value="OFFB">OFF</button><br></th>
+    	
+
+   </center>
+  </body>
+</html>
+
+
+
+
