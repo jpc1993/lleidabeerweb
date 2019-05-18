@@ -17,17 +17,7 @@ def sensortemp(temperaturabirra,temperaturaferm,heater):
 	if temperaturabirra < 20:
 		temperaturabirra = temperaturabirra + valorAleatoripos*0.2
 
-
-	valorAleatoriferm = random.randint(0,5)*0.85
-	valorAleatoribirra = random.randint(-2,2)*0.93
-	if heater=='OFF'and (temperaturaferm >=20):
-		temperaturaferm = temperaturaferm - valorAleatoriferm
-	elif heater=='ON':
-		temperaturaferm = temperaturaferm + valorAleatoriferm
-	
-	temperaturabirra = temperaturabirra + valorAleatoribirra
-
-	
+		
 	return  temperaturabirra,temperaturaferm
 
 def sensorflow(capaciferm,capacibeer,valvuferm,valvubeer):
@@ -44,13 +34,7 @@ def sensorflow(capaciferm,capacibeer,valvuferm,valvubeer):
 	if valvubeer=='ON' and (capacibeer <0.5):
 		capacibeer=0
 
-	if (valvuferm=='ON') and (capaciferm >=0):
-		capaciferm=capaciferm-0.2
-		capacibeer=capacibeer+0.2
 	
-	if valvubeer=='ON' and (capacibeer >=0):
-		capacibeer=capacibeer-0.5
-
 	
 	return  capaciferm, capacibeer
 
